@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,22 @@
     <li>
     <a href="2_Apropos"> A propos</a>
     <a href="3_ServiceClient">Service client</a>
+    <?php
+    if(isset($_SESSION['Mail'])){
+          
+          ?>
+          <a href="4_profil.php" name="Compte">Mon compte</a>
 
+          
+      
+      <?php
+        }else{
+            ?>
+            <a href="connexion.php" name="Connexion">Connexion</a>
+            <?php
+        }
+
+    ?>
     </li>
 </body>
 </html>
