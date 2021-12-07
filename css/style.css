@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap|Lora|Roboto");
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+@import url("components/container.css");
+@import url("components/card.css");
+/*Colors and fonts*/
+
+element.style {
+}
+
+
+body{
+	background: rgb(30, 30, 30);
+	color:  whitesmoke;
+	font-family: 'Lora',serif; /*Helvetica;*/
+	font-size: 18px;
+	margin: 0px;
+}
+
+h1,h2,h3{
+	font-family: 'Roboto', sans-serif; /*Bebas-Neue*/
+	font-weight : bold;
+}
+
+h1{
+	font-family: 'Bebas Neue', cursive;
+	color:  #A78436; /*#b99d5e; #e7c476;#DFD8C8;*/
+	font-size: 60px;
+	letter-spacing: 10px;
+	font-weight: 900;
+}
+
+h2{
+	color:  #B99D5E; /*#DFD8C8;*/
+	font-weight: 750;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+.img-circle { /* select all elements with the class="img-circle" */
+  border-radius: 50%;
+}
+
+.img-bordered {
+  border: 10px solid red;
+}
+
+.list-inline{
+	list-style: none;
+	padding-left: 0px;
+}
+
+.list-inline li {
+	display: inline;
+	padding: 7px;
+}
+
+.list-inline i {
+	font-size: 50px;
+	color: #8f3847;
+	transition: color 0.3s ease;
+}
+
+.list-inline i:hover {
+	color: #ed163c;
+}
+
+#introduction p {
+	margin-bottom: 40px;
+}
+
+#boss {
+    max-width: auto;
+    width:	auto; 
+    height: auto;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.9);
+}
+
+/*
+
+body{
+	background-color: rgb(30, 30, 30); #41444B; 
+	color: whitesmoke; rgb(200, 200, 200)
+	font-family: Helvetica;
+	text-align: justify;
+}
+
+h1{
+	color:  #DFD8C8;
+	font-family: Arial, serif;
+	font-weight: 900;
+	/*letter-spacing: 10px;
+}*/
