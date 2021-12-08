@@ -51,9 +51,10 @@ session_start();
             $ville = $_POST["ville"];
             $Cp = $_POST["Cp"];
             $rue = $_POST["rue"];
+            $TypeUser = 0;
     
        
-            $req = "insert into utilisateur values ('$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue')";
+            $req = "insert into utilisateur values ('$TypeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue')";
             $res = mysqli_query($id,$req);
 
 
@@ -61,7 +62,7 @@ session_start();
             $_SESSION['mdp'] = $Mdp;
             $_SESSION['Prenom'] = $Prenom;
             $_SESSION['Nom'] = $Nom ;
-            
+            $_SESSION['TypeUser'] = $TypeUser ;
             $_SESSION['ville'] = $ville;
             $_SESSION['Cp'] = $Cp;
             $_SESSION['rue'] = $rue;

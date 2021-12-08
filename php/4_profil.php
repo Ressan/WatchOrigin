@@ -8,6 +8,9 @@ $Mail = $_SESSION['Mail'];
 
 
 
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +38,14 @@ $Mail = $_SESSION['Mail'];
 
         
         while($ligne = mysqli_fetch_assoc($res)){
-        echo "<div  id='carre'>
+        echo "<div  id='carre'> 
           <tr> 
+                    " ;
+                    
+                    if($ligne['TypeUser'] == 1){
+                        echo" Vous etes en session admin <br><br>";
+                    }
+                   echo "
                     Votre prénom : <td>".$ligne['prenomUser']."</td> <br></br>
                     Votre nom <td>".$ligne["NomUser"]."</td><br></br>
                     votre adresse mail <td>".$ligne["Mail"]."</td><br></br>
