@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
                      <a href="lien">
                          <div class="sp-List_ThumbLinkBox">
                              <span>
-                                 <img role="img" src="images/faq_Icon.png" alt="FAQ">
+                                 <img role="img" src="../images/faq_Icon.png" alt="FAQ">
                              </span>
                          </div>
                          <p class="sp-List_ThumbLinkTitle">FAQ</p>
@@ -29,7 +29,7 @@
                     <a href="lien">
                         <div class="sp-List_ThumbLinkBox">
                             <span>
-                                <img role="img" src="images/instruction_icon.png" alt="FAQ">
+                                <img role="img" src="../images/instruction_icon.png" alt="FAQ">
                             </span>
                         </div>
                         <p class="sp-List_ThumbLinkTitle">Conditions Générales</p>
