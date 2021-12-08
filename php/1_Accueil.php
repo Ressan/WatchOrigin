@@ -17,6 +17,7 @@ session_start();
     <li>
     <a href="2_Apropos"> A propos</a>
     <a href="3_ServiceClient">Service client</a>
+    <a href="Produit.php">Nos produits</a>
     <?php
     if(isset($_SESSION['Mail'])){
           

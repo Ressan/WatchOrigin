@@ -18,7 +18,7 @@ session_start();
     <form action="" method='post'>
     <input type="text" name="Nom" id="" placeholder="Entrer votre nom de famille"><br><br>
     <input type="text" name="Prenom" id placeholder="Entrer votre prenom"><br><br>
-    <input type="mail" name="Mail" id="" placeholder="Entrer votre mail"><br><br>
+    <input type="mail" name="mail" id="" placeholder="Entrer votre mail"><br><br>
     <input type="password" name="mdp" id="" placeholder="Entrer votre mot de passe"><br><br>
     <input type="text" name="ville" id="" placeholder=" Entrer le nom de votre ville "><br><br>
     <input type="text" name="Cp" id="" placeholder="Entrer le code postal"><br><br>
@@ -32,7 +32,7 @@ session_start();
 
     if(isset($_POST['ok'])){
         $id = mysqli_connect("127.0.0.1","root","","wo");
-        $Mail = $_POST["Mail"];
+        $Mail = $_POST["mail"];
         $req = "select Mail from utilisateur where Mail='".$Mail."'";
         $res = mysqli_query($id,$req);
 
@@ -42,7 +42,7 @@ session_start();
     
             
         
-            $id = mysqli_connect("127.0.0.1","root","","wo");
+            
             
             $Nom = $_POST["Nom"];
             $Prenom = $_POST["Prenom"];
@@ -67,10 +67,10 @@ session_start();
             $_SESSION['Cp'] = $Cp;
             $_SESSION['rue'] = $rue;
             
-            
+            header('Location: 4_profil.php');
             
         }
-        header('Location: 4_profil.php');
+       
     }
         ?>
 </body>
