@@ -1,40 +1,32 @@
-<?php
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1_accueil</title>
+    <title>Nous Contacter</title>
 </head>
 <body>
-    <h1>Wo</h1>
-    <li>
-    <a href="2_Apropos"> A propos</a>
-    <a href="3_ServiceClient">Service client</a>
-    <?php
-    if(isset($_SESSION['Mail'])){
-          
-          ?>
-          <a href="4_profil.php" name="Compte">Mon compte</a>
-
-          
+    <div class="container">
+        <form action="action_page.php">
       
-      <?php
-        }else{
-            ?>
-            <a href="connexion.php" name="Connexion">Connexion</a>
-            <?php
-        }
+          <label for="fname">Prénom</label>
+          <input type="text" id="fname" name="firstname" placeholder="Votre prénom..">
+      
+          <label for="lname">Nom</label>
+          <input type="text" id="lname" name="lastname" placeholder="Votre nom..">
 
-    ?>
-    </li>
-    <div class="footer-dark">
+          <label for="Email">Email</label>
+          <input type="text" id="emai" name="email" placeholder="Votre Email    ">
+      
+      
+          <label for="subject">Sujet</label>
+          <textarea id="subject" name="subject" placeholder="Dites nous tous..." style="height:200px"></textarea>
+          <input type="submit" value="Envoyer">
+      
+        </form>
+      </div>
+      <div class="footer-dark">
         <footer>
             <div class="container">
                 <div class="row">
