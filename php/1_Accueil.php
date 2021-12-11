@@ -23,17 +23,28 @@ session_start();
           
           ?>
           <a href="4_profil.php" name="Compte">Mon compte</a>
+          <?php
+            
+           
 
+
+            $_POST['TypeUser'] = $_SESSION['TypeUser'];
+            
+            if($_POST['TypeUser']  == 1){
+
+                echo'<a href="pageAdmin.php">interface Admin</a>';
+            }
           
-      
+      ?>
       <?php
         }else{
             ?>
-            <a href="connexion.php" name="Connexion">Connexion</a>
+            <a href="connexion.php" name="Connexion">Identification</a>
             <?php
         }
 
     ?>
     </li>
+
 </body>
 </html>

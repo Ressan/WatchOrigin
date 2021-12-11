@@ -33,7 +33,7 @@ session_start();
     if(isset($_POST['ok'])){
         $id = mysqli_connect("127.0.0.1","root","","wo");
         $Mail = $_POST["mail"];
-        $req = "select Mail from utilisateur where Mail='".$Mail."'";
+        $req = "select Mail from utilisateur where Mail='.$Mail.'";
         $res = mysqli_query($id,$req);
 
         if ( mysqli_num_rows($res) > 0 ){
@@ -46,15 +46,16 @@ session_start();
             
             $Nom = $_POST["Nom"];
             $Prenom = $_POST["Prenom"];
-            $Mail = $_POST["Mail"];
+            $Mail = $_POST["mail"];
             $Mdp = $_POST["mdp"];
             $ville = $_POST["ville"];
             $Cp = $_POST["Cp"];
             $rue = $_POST["rue"];
             $TypeUser = 0;
+            $Valider = 0;
     
        
-            $req = "insert into utilisateur values ('$TypeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue')";
+            $req = "insert into utilisateur values (null,'$TypeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue','$Valider')";
             $res = mysqli_query($id,$req);
 
 
