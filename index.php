@@ -5,14 +5,39 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en-us">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WO - Watch Origin</title>
-<body>
+<html lang="en" >
+  <head>
+    <meta name="description" content="Angular Material: Installing with NPM">
 
-    {% include php\1_Accueil.php %}
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
 
-</body>
+  </head>
+  <body >
+
+    {% include 1_Accueil.php %}
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-aria.js"></script>
+    <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+
+    <script>
+    angular
+      .module('MyApp', ['ngMaterial'])
+      .run(function(){
+        console.log("MyApp is ready!") || displayInPreview("MyApp is ready!");
+      });
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
+    </script>
+    
+  </body>
 </html>
+
