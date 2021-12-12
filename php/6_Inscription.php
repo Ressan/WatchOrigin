@@ -1,66 +1,82 @@
-<?php
+<?php 
 session_start();
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <?php 
+      include("head.php")
+    ?>
+    <title>Inscription | WO - Watch Origin</title>
 </head>
 <body>
-    
-    <a href="1_Accueil.php">Accueil</a> <br><br>
-    
-    <?php
-    if(isset($_POST["ok"])){
-        $id = mysqli_connect("127.0.0.1","root","","wo");
-        $Mail = $_POST["mail"];
-        $Mdp = $_POST["mdp"];
-        $req = "select * from utilisateur where mail='$Mail' and Mdp='$Mdp'";
-        $res = mysqli_query($id,$req);
-        
-       
-        if(mysqli_num_rows($res)>0 )
-        {
-           
-            
-            $Mail = $_POST["mail"];
-            
-            $_SESSION['Mail'] = $Mail;
-            $_SESSION['Mdp'] = $Mdp;
 
-            
-            
-
-            if(mysqli_num_rows($res)>0){
-
-                
-                header('Location: 4_profil.php');
-                
-            }
-           
-        
-        }else{
-        $erreur =  "Erreur de mail ou mot de passe";
-        }
-    }
+    <?php 
+      include("navbar.php")
     ?>
 
-    <form action="" method="post" class="Formulaire">
+    <h1>Inscription</h1>
+    <form action="" method='post'>
+    <input type="text" name="Nom" id="" placeholder="Entrer votre nom de famille"><br><br>
+    <input type="text" name="Prenom" id placeholder="Entrer votre prenom"><br><br>
+    <input type="mail" name="mail" id="" placeholder="Entrer votre mail"><br><br>
+    <input type="password" name="mdp" id="" placeholder="Entrer votre mot de passe"><br><br>
+    <input type="text" name="ville" id="" placeholder=" Entrer le nom de votre ville "><br><br>
+    <input type="text" name="Cp" id="" placeholder="Entrer le code postal"><br><br>
+    <input type="text" name="rue" id="" placeholder="Entrer votre rue"><br><br><br><br>
+    <input type="submit" value="S'inscrire" name='ok'>   
+    </form>
     
-    <input type="text" name="mail" placeholder="e-mail" required><br><br>
-    <input type="password" name="mdp" placeholder="Mot de passe" required><br><br>
-    <?php if(isset($erreur)) echo "<h4>$erreur</h4>"; ?>
-    <input type="submit" value="Connexion" id="btn2" name='ok' >
-    <input type="submit"  value="Inscription" id="btn1" onclick="window.location.href = 'Inscription.php';">
-    </form>    
+
+
+    <?php
+
+    if(isset($_POST['ok'])){
+        $id = mysqli_connect("127.0.0.1","root","","wo");
+        $Mail = $_POST["mail"];
+        $req = "select Mail from utilisateur where Mail='.$Mail.'";
+        $res = mysqli_query($id,$req);
+
+        if ( mysqli_num_rows($res) > 0 ){
+            echo "Mail deja pris";
+        }else{
+    
+            
+        
+            
+            
+            $Nom = $_POST["Nom"];
+            $Prenom = $_POST["Prenom"];
+            $Mail = $_POST["mail"];
+            $Mdp = $_POST["mdp"];
+            $ville = $_POST["ville"];
+            $Cp = $_POST["Cp"];
+            $rue = $_POST["rue"];
+            $TypeUser = 0;
+            $Valider = 0;
+    
+       
+            $req = "insert into utilisateur values (null,'$TypeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue','$Valider')";
+            $res = mysqli_query($id,$req);
+
+
+            $_SESSION['Mail'] = $Mail;
+            $_SESSION['mdp'] = $Mdp;
+            $_SESSION['Prenom'] = $Prenom;
+            $_SESSION['Nom'] = $Nom ;
+            $_SESSION['TypeUser'] = $TypeUser ;
+            $_SESSION['ville'] = $ville;
+            $_SESSION['Cp'] = $Cp;
+            $_SESSION['rue'] = $rue;
+            
+            header('Location: 4_profil.php');
+            
+        }
+       
+    }
+        ?>
     <div class="footer-dark">
         <footer>
             <div class="container">
