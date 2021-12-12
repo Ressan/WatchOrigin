@@ -34,7 +34,7 @@
         echo'
         <form action="" method ="post">
         <input type="submit" value="Supprimer" name=',$nom,'>
-        <input type="button" 
+        
         </form>';
         if(isset($_POST[$nom])){
 
