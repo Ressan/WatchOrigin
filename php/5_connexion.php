@@ -8,6 +8,9 @@
 <body>
     
     <?php include("navbar.php");
+     ?>
+     <h2>Connexion</h2>
+    <?php 
     if(isset($_POST["ok"])){
         $id = mysqli_connect("'localhost':3306","root","root");
         $Mail = $_POST["mail"];
