@@ -1,43 +1,11 @@
 <?php
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en" >
-  <head>
-    <meta name="description" content="Angular Material: Installing with NPM">
-
-    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
-
-  </head>
+    <meta http-equiv="Refresh" content="0; url='php/1_Accueil.php'" />
   <body >
-
-    {% include 1_Accueil.php %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-aria.js"></script>
-    <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
-
-    <script>
-    angular
-      .module('MyApp', ['ngMaterial'])
-      .run(function(){
-        console.log("MyApp is ready!") || displayInPreview("MyApp is ready!");
-      });
-
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
-    </script>
-    
   </body>
 </html>
 
