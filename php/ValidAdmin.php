@@ -1,17 +1,7 @@
 <?php
 session_start();
-
-    
-
 $Mail = $_SESSION['Mail'];
-
-
-
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +15,6 @@ $Mail = $_SESSION['Mail'];
 
 <h1> Validation admin</h1>
 
-
 <?php
  
 $idf = mysqli_connect("127.0.0.1","root","","wo");
@@ -38,20 +27,10 @@ while($ligne = mysqli_fetch_assoc($res)){
     $id = $ligne["id"];
     $nom="bouton".$id;
     $nom2="bouton".$id;
-    
-    
-    
         echo '
             <form action="" method ="post">';
 
-
-                
-                
-                
                 echo''.$ligne["prenomUser"].'&nbsp&nbsp&nbsp'.$ligne["NomUser"].'&nbsp&nbsp&nbsp'.$ligne["Mail"].'
-                    
-
-              
                 <input type="submit" value="Valider" name =',$nom,'>
                 <input type="submit" value="Radier" name =',$nom,'><br>';
                 
@@ -61,13 +40,10 @@ while($ligne = mysqli_fetch_assoc($res)){
                     $req2 = "UPDATE utilisateur  set Valider = '1' where id = '$id'";
                     $res2 = mysqli_query($idf,$req2);  
                     header("Refresh:0");
-                        
                 }
                 
                 if(isset($_POST[$nom])){
 
-
-            
                     $req2 = "DELETE FROM utilisateur WHERE id = '$id'";
                     $res2 = mysqli_query($idf,$req2);  
                     header("Refresh:0");
@@ -75,24 +51,11 @@ while($ligne = mysqli_fetch_assoc($res)){
                 }
                 ?>
                 
-               
-            
-            
-
-
-                
-
-              
-
             </form>
             <?php
             
-            
 }
-            
 ?>
-
-
 
 </body>
 </html>
