@@ -1,9 +1,3 @@
-
-<?php
-session_start();
-$Mail = $_SESSION['Mail'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +10,7 @@ $Mail = $_SESSION['Mail'];
     <h1>Votre profil</h1>
     <?php
 
+        $Mail = $_SESSION['Mail'];
     
         $idf = mysqli_connect("127.0.0.1","root","","wo");
         $req = "select prenomUser, NomUser, Mail, rue, adresseUser, CpVille, TypeUser from utilisateur where Mail='".$Mail."'";

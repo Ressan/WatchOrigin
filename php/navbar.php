@@ -10,6 +10,13 @@
           ?>
           <a href="4_profil.php" name="Compte">Mon compte</a>
     <?php
+
+            if($_SESSION['Mail']  == 'Admin@wo.com'){
+
+                echo'<a href="pageAdmin.php">interface Admin</a>';
+            }
+
+
         }else{
     ?>
           <a href="5_connexion.php" name="Connexion">Connexion</a>
