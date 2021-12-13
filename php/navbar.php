@@ -37,16 +37,19 @@
             }
 
         ?>
-        </li>
-        <div class="col-sm-6 col-md-3 nav-item dropdown">
+        <li>  
+            <div class="col-sm-6 col-md-3 nav-item dropdown">
 
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Produit </a>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">WO for men</a>
-                              <a class="dropdown-item" href="#">WO for women</a>
-                              <a class="dropdown-item" href="#">WO customs</a>
-                            </div>
-        </div>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Produit </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">WO for men</a>
+                                  <a class="dropdown-item" href="#">WO for women</a>
+                                  <a class="dropdown-item" href="#">WO customs</a>
+                                </div>
+            </div>
+        </li>
+
+        </li>
                             <!-- 
                             <h3>Produit</h3>
                             <ul>
