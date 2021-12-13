@@ -51,7 +51,7 @@
 
     if(isset($_POST['Deconnexion'])){
         session_destroy();
-        header('Location: 1_accueil.php');       
+        header('Location: 1_Accueil.php');       
     }
 
     if(isset($_POST['Modifier'])){
