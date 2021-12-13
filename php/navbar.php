@@ -38,15 +38,13 @@
 
         ?>
         </li>
-        <div class="col-sm-6 col-md-3 nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Produit </a>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">WO for men</a>
-                              <a class="dropdown-item" href="#">WO for women</a>
-                              <a class="dropdown-item" href="#">WO customs</a>
-                            </div>
-        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="Produit.php">Produit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+        </li>
+        
                             <!-- 
                             <h3>Produit</h3>
                             <ul>

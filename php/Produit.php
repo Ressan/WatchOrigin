@@ -1,19 +1,17 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+    include("head.php")
+    ?>
     <title>Document</title>
 </head>
 <body>
-    <a href="1_Accueil.php"> Accueil</a>
-    <a href="Panier.php"> Mon Panier</a>
-    <?php
+    <?php 
+    include("navbar.php");
+    
 
     $dsn = 'mysql:dbname=wo;host=127.0.0.1';
     $user = 'root';
@@ -35,76 +33,74 @@ session_start();
 
 
 
-    <?php 
-    foreach($produit as $c) : ?>
-    <div class="card" style="width: 18rem;">
-    <img src=" <?= $c['image'] ?>" class="card-img-top">
-        <div class="card-body">
-        <?php    
-        $idProd = $c['idProduit'] ;
-        $nom = "bouton".$c['idProduit'] ;
-        
-        
-            ?>
-            <h5 class="card-title"><?= $c['libelle'] ?></h5>
-            <p class="card-text"><?= $c['description'] ?></p>
-            <h3 class="card-title"><?= $c['Prix'] ?>€</h3>
 
-            <?php
-            echo'
-            <form action="" method="post">
-                <input type="submit" value="Ajouter" name=',$nom,'><br><br><br>
-            ';
-            ?>
-            </form>
+    <div class="row no-gutte" style="margin: 100px">
+        <?php 
+        foreach($produit as $c) : ?>
+        <div class="col-3">
             
-            <?php 
-            if(isset($_POST[$nom])){
-            
+            <div class="card" style="width: 15rem; height: 30rem; margin-top: 30px; ">
+            <img src=" ../images/<?= $c['image'] ?>" class="card-img-top">
+                <div class="card-body">
+                <?php    
+                $idProd = $c['idProduit'] ;
+                $nom = "bouton".$c['idProduit'] ;
                 
-                $req2 = "UPDATE produit  set Etat = '1' where idProduit = '$idProd'";
-                $stmt2 = $pdo->prepare($req2);
-                $stmt2 -> execute();
-
-                $req3 = "UPDATE produit  set Total = Total + 1 where idProduit = '$idProd'";
-                $stmt3 = $pdo->prepare($req3);
-                $stmt3 -> execute();
-                echo $c['Total'];
                 
-               
+                    ?>
+                    <h5 class="card-title"><?= $c['libelle'] ?></h5>
+                    <p class="card-text"><?= $c['description'] ?></p>
+                    <h3 class="card-title"><?= $c['Prix'] ?>€</h3>
 
-            }
+                    <?php
+                    echo'
+                    <form action="" method="post">
+                        <input type="submit" value="Ajouter" name=',$nom,'><br><br><br>
+                    ';
+                    ?>
+                    </form>
+                    
+                    <?php 
+                    if(isset($_POST[$nom])){
+                        
+                        
+                        $req2 = "UPDATE produit  set Etat = '1' where idProduit = '$idProd'";
+                        $stmt2 = $pdo->prepare($req2);
+                        $stmt2 -> execute();
 
-?>
+                        $req3 = "UPDATE produit  set Total = Total + 1 where idProduit = '$idProd'";
+                        $stmt3 = $pdo->prepare($req3);
+                        $stmt3 -> execute();
+                        ?>
+                        <h3 class="title"><?php',$c['Total'],'?><h3>
+                        <?php
+                      
+                    } 
 
-            
-        </div>
-    </div>
+                    
+                    
 
+                    
 
-    <?php endforeach ;
-
-    
-        
-        /*$id = mysqli_connect("127.0.0.1","root","","wo");
-        $req = "select * from produit";
-        $res = mysqli_query($id,$req);
-        
-        
-        while($ligne = mysqli_fetch_assoc($res)){
-            $idf = $["idProduit"];
-        }
-
-        if(isset($_POST["Ajouter"])){
-
-            echo 'ouai';
-            $req2 = "UPDATE produit  set Etat = '1' where idProduit = '$idf'";
-            $res2 = mysqli_query($id,$req);
-            echo $idf;
-        }*/
-
-
+                   
+                    
     ?>
+                </div>
+            </div>   
+        </div>
+    
+
+
+    <?php endforeach ;?>
+
+    </div>
+        
+       
+
+      
+        <?php 
+        include("footbar.php"); 
+        ?>
 
 </body>
 </html>

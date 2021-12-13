@@ -33,6 +33,7 @@ while($ligne = mysqli_fetch_assoc($res)){
                     $req2 = "UPDATE utilisateur  set Valider = '1' where id = '$id'";
                     $res2 = mysqli_query($idf,$req2);  
                     header("Refresh:0");
+                    $_SESSION["$idUser" ] = $id; 
                 }
                 
                 if(isset($_POST[$nom])){
@@ -42,6 +43,7 @@ while($ligne = mysqli_fetch_assoc($res)){
                     header("Refresh:0");
                         
                 }
+
                 ?>
             </form>
             <?php
