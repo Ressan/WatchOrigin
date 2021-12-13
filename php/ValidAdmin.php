@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include 'head.php' ?>
+    <?php include "head.php"; ?>
     <title>Document</title>
 </head>
 <body>
+<?php include 'navbar.php'; ?>
 
-<h1> Validation admin</h1>
-
+<center><h1> Validation admin</h1></center>
+<br><br>
 <?php
 $Mail = $_SESSION['Mail'];
 $idf = mysqli_connect("127.0.0.1","root","","wo");
@@ -20,12 +21,12 @@ while($ligne = mysqli_fetch_assoc($res)){
     $nom="bouton".$id;
     $nom2="bouton2".$id;
     
-        echo '
+        echo '<center>
             <form action="" method ="post">';
 
                 echo''.$ligne["prenomUser"].'&nbsp&nbsp&nbsp'.$ligne["NomUser"].'&nbsp&nbsp&nbsp'.$ligne["Mail"].'
                 <input type="submit" value="Valider" name =',$nom,'>
-                <input type="submit" value="Radier" name =',$nom2,'><br>';
+                <input type="submit" value="Radier" name =',$nom2,'><br></center>';
                 
                 echo'<br>';
                 if(isset($_POST[ $nom])){
@@ -33,6 +34,7 @@ while($ligne = mysqli_fetch_assoc($res)){
                     $req2 = "UPDATE utilisateur  set Valider = '1' where id = '$id'";
                     $res2 = mysqli_query($idf,$req2);  
                     header("Refresh:0");
+                    $_SESSION["$idUser" ] = $id; 
                 }
                 
                 if(isset($_POST[$nom])){
@@ -42,10 +44,12 @@ while($ligne = mysqli_fetch_assoc($res)){
                     header("Refresh:0");
                         
                 }
+
                 ?>
             </form>
             <?php
 }
+ 
 ?>
 
 </body>

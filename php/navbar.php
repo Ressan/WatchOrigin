@@ -45,6 +45,10 @@
         <li class="nav-item">
           <a class="nav-link" href="4_profil.php" name="Compte">Mon compte</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+        </li>
         <?php
 
                 if($_SESSION['Mail']  == 'Admin@wo.com'){
