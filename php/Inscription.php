@@ -16,13 +16,13 @@ session_start();
 
     <h1>Inscription</h1>
     <form action="" method='post'>
-    <input type="text" name="Nom" id="" placeholder="Entrer votre nom de famille"><br><br>
-    <input type="text" name="Prenom" id placeholder="Entrer votre prenom"><br><br>
-    <input type="mail" name="mail" id="" placeholder="Entrer votre mail"><br><br>
-    <input type="password" name="mdp" id="" placeholder="Entrer votre mot de passe"><br><br>
-    <input type="text" name="ville" id="" placeholder=" Entrer le nom de votre ville "><br><br>
-    <input type="text" name="Cp" id="" placeholder="Entrer le code postal"><br><br>
-    <input type="text" name="rue" id="" placeholder="Entrer votre rue"><br><br><br><br>
+    <input type="text" name="Nom" id="" placeholder="Entrer votre nom de famille" required><br><br>
+    <input type="text" name="Prenom" id placeholder="Entrer votre prenom" required><br><br>
+    <input type="mail" name="mail" id="" placeholder="Entrer votre mail"required><br><br>
+    <input type="password" name="mdp" id="" placeholder="Entrer votre mot de passe"required><br><br>
+    <input type="text" name="ville" id="" placeholder=" Entrer le nom de votre ville "required><br><br>
+    <input type="text" name="Cp" id="" placeholder="Entrer le code postal"required><br><br>
+    <input type="text" name="rue" id="" placeholder="Entrer votre rue"required><br><br><br><br>
     <input type="submit" value="S'inscrire" name='ok'>   
     </form>
     

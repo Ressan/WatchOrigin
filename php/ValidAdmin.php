@@ -37,7 +37,7 @@ while($ligne = mysqli_fetch_assoc($res)){
    
     $id = $ligne["id"];
     $nom="bouton".$id;
-    $nom2="bouton".$id;
+    $nom2="bouton2".$id;
     
     
     
@@ -53,7 +53,7 @@ while($ligne = mysqli_fetch_assoc($res)){
 
               
                 <input type="submit" value="Valider" name =',$nom,'>
-                <input type="submit" value="Radier" name =',$nom,'><br>';
+                <input type="submit" value="Radier" name =',$nom2,'><br>';
                 
                 echo'<br>';
                 if(isset($_POST[ $nom])){

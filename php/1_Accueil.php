@@ -15,14 +15,14 @@ session_start();
 <body>
     <h1>Wo</h1>
     <li>
-    <a href="2_Apropos"> A propos</a>
-    <a href="3_ServiceClient">Service client</a>
-    <a href="Produit.php">Nos produits</a>
+    <a href="2_Apropos"> A propos</a>&nbsp&nbsp&nbsp
+    <a href="3_ServiceClient">Service client</a>&nbsp&nbsp&nbsp
+    <a href="Produit.php">Produits</a>&nbsp&nbsp&nbsp
     <?php
     if(isset($_SESSION['Mail'])){
           
           ?>
-          <a href="4_profil.php" name="Compte">Mon compte</a>
+          <a href="4_profil.php" name="Compte">Mon compte</a>&nbsp&nbsp&nbsp
           <?php
             
            
@@ -39,7 +39,7 @@ session_start();
       <?php
         }else{
             ?>
-            <a href="connexion.php" name="Connexion">Identification</a>
+            <a href="connexion.php" name="Connexion">Identification</a>&nbsp&nbsp&nbsp
             <?php
         }
 
