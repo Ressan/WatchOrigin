@@ -1,11 +1,5 @@
-.nav-link {
-	/*text-decoration: none;*/ 
+.navstyle {
+	style=" text-decoration: none; 
 	color:  black; 
-	font-weight: bold;
-}
-
-.nav-link:hover {
-	/*text-decoration: none;*/ 
-	color:  black; 
-	font-weight: bold;
+	font-weight: bold;"
 }

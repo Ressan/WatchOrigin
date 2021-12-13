@@ -1,14 +1,19 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
-    include "head.php";
-     ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <a href="1_Accueil.php"> Accueil</a>
+    <a href="Panier.php"> Mon Panier</a>
     <?php
-    include "navbar.php";
 
     $dsn = 'mysql:dbname=wo;host=127.0.0.1';
     $user = 'root';
@@ -98,11 +103,6 @@
         <?php 
         include("footbar.php"); 
         ?>
-
-
-    <?php 
-    include "footbar.php";
-     ?>
 
 </body>
 </html>

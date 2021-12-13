@@ -1,16 +1,14 @@
 .containerperso{
-    width: 900px;
-    margin: 0px auto;
-    background-color: white;
+    width: 1200px;
+    margin: 40px auto;
 }
 
-/*
 @media (max-width: 1250px) {
-  /* For a screen < 960px, this CSS will be read 
+  /* For a screen < 960px, this CSS will be read */
   .containerperso{
     width: 900px;
   }
-}*/
+}
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
   .containerperso{

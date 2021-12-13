@@ -11,12 +11,14 @@
     include("navbar.php")
     
     ?>
-                <video class="banner"src="../images/The_new_Rolex_Explorer_II.mp4" playsinline autoplay muted loop></video>
-
     <div class="containerperso">
+
         <div class="card-linen">
             <h2>ACCUEIL</h2>
             <p> Ajouter le contenu d'accueil les valeurs etc</p>
+            <div>
+                <video src="../images/The_new_Rolex_Explorer_II.mp4"    playsinline autoplay muted loop></video>
+            </div>
         </div>
     </div>
     <?php 
