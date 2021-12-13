@@ -1,0 +1,95 @@
+
+
+
+
+
+
+
+
+
+
+
+.sp-List_ThumbLinkTitle {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+.sp-List_ThumbLinkBox>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.sp-List_ThumbLinkBox {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 30px;
+    background-color: #f6f6f6;
+}
+.sp-List_Item a {
+    display: block;
+}
+a {
+    color: #204072;
+    text-decoration: none;
+}
+
+.sp-List_Items-quarter.is-center {
+    justify-content: center;
+}
+@media only screen and (max-width: 768px)
+.sp-List_Heading {
+    margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px)
+.sp-List_Items-quarter .sp-List_Item, .sp-List_Items-trisect .sp-List_Item {
+    width: 100%;
+}
+@media only screen and (max-width: 768px)
+.sp-List_Items, .sp-List_Items-quarter, .sp-List_Items-trisect {
+    display: block;
+    margin: 0
+}
+@media scree only screen and (max-width: 768px)
+.sp-List {
+    padding-top: 35px;
+}
+.sp-List_Items, .sp-List_Items-quarter, .sp-List_Items-trisect {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -50px 0 70px;
+}
+ol, ul {
+    list-style: none;
+}
+
+
+.sp-List_Heading {
+    margin-bottom: 70px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #161616;
+    text-align: center;
+    font-family: Montserrat,Noto Sans,Noto Sans JP,Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,メイリオ,sans-serif;
+}
+.sp-List_Inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+

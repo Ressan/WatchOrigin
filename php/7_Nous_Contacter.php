@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="contacte.css">
     <?php 
         include("head.php")
     ?>
@@ -29,5 +30,5 @@
       </div>
       <?php 
         include("footbar.php")
-       ?>
+       ?>  
 </html>

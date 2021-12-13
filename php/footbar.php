@@ -1,4 +1,7 @@
-  <div class="footer-dark">
+<head>
+    <link rel="stylesheet" href="footbar.css">   
+</head>
+<div class="footer-dark">
     <footer>
         <div class="container" style="text-align: center;">
                 <div class="item">
@@ -19,11 +22,20 @@
                         <li class=" item ">Tade : <a href="mailto:rayan.kaci936@gmail.com">rayan.kaci936@gmail.com</a></li>
                     </ul>
                 </div>
+<<<<<<< Updated upstream
                 <div class="col-md-3 item text">
                     <h3>SOCIAL</h3>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class=" 1_Accueil.php"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
                     </div>
                 </div>
+=======
+                <br><br>
+                <div class="col-md-6 item text">
+                    <h3>Watchs Originals</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+    
+>>>>>>> Stashed changes
             </div>
             <div>
                 <p class="">Copyright Watch Origin. Tous droits réservés. 2021</p>
@@ -32,3 +44,4 @@
         </div>
     </footer>
 </div>
+

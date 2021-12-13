@@ -1,0 +1,28 @@
+div{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    border-color: wheat;
+    background-color: white;
+}
+
+ul{
+    border-radius: 2px;
+    border-color: wheat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    border-radius: 2px;
+    border-color: wheat;
+    margin-left: auto;
+    margin-right: auto;
+}
