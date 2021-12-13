@@ -63,7 +63,21 @@
         <?php
             }
         ?>
-       
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Produit.php">Produit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+        </li>
+        
+                            <!-- 
+                            <h3>Produit</h3>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
 
 
       </ul>
