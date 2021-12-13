@@ -48,9 +48,9 @@
                 
                 
                     ?>
-                    <h5 class="card-title"><?= $c['libelle'] ?></h5>
+                    <h3 class="card-title"><?= $c['libelle'] ?></h3>
                     <p class="card-text"><?= $c['description'] ?></p>
-                    <h3 class="card-title"><?= $c['Prix'] ?>€</h3>
+                    <h3 class="card-texte"><?= $c['Prix'] ?>€</h3>
 
                     <?php
                     echo'

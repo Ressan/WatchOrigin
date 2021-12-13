@@ -9,6 +9,7 @@
 <body>
     <?php 
     include("navbar.php")
+    
     ?>
     <div class="containerperso">
 

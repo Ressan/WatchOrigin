@@ -14,7 +14,7 @@
 <?php 
     include("navbar.php");
     
-    echo'<h1>Mon panier</h1>';
+    echo'<center><h1>Mon panier</h1></center>';
 
     $dsn = 'mysql:dbname=wo;host=127.0.0.1';
     $user = 'root';
@@ -38,9 +38,9 @@
     <div class="row no-gutte" style="margin: 20px">
         <?php 
         foreach($produit as $c) : ?>
-        <div class="col-4">
-            <div class="card" style="width: 15rem; height: 30rem;">
-            <img src=" <?= $c['image'] ?>" class="card-img-top">
+        <div class="col-3">
+            <div class="card" style="width: 15rem; height: 30rem;margin-top: 30px; ">
+            <img src=" ../images/<?= $c['image'] ?>" class="card-img-top" >
             <div class="card-body">
             <?php    
             $idProd = $c['idProduit'] ;
@@ -73,7 +73,7 @@
                     $req3 = "UPDATE produit  set Total = Total + '1' where idProduit = '$idProd'";
                     $stmt3 = $pdo->prepare($req3);
                     $stmt3 -> execute();
-                    
+                   
                     
                     
                 
@@ -112,12 +112,19 @@
             
         
     </div>
-    <br><br><br><br><br>
+    <br><br>
     <form action="" method="post">
-    <input type="submit" value="Commander" name="Valider">
+        
+    <center> <h2><?php echo $MaxiTot;  ?> €</h2> </center>
+    
+    
+    <center>
+    <input type="submit" value="Commander" name="Valider"><br><br>
+    </center>
     </form>
     <?php
-    echo $MaxiTot, '€';
+    
+    /*
     if(isset($_POST['valider'])){#button de validation de la commande dans le panier
         $id = mysqli_connect("127.0.0.1","root","","wo");
         $_POST["mail"] = $_SESSION['Mail'];
@@ -152,9 +159,9 @@
         ?>
         <form method="POST" action="">
             <input type="submit" value="Valider ma commande" name="valider"/>
-        </form>
+        </form>*/
             
-
+?>
     
 </body>
 </html>
