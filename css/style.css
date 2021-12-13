@@ -4,6 +4,7 @@
 @import url("components/button.css");
 @import url("components/container.css");
 @import url("components/card.css");
+@import url("components/footer.css");
 /*Colors and fonts*/
 
 element.style {
@@ -11,7 +12,7 @@ element.style {
 
 
 body{
-	background: rgb(255, 255, 255);
+	background: rgb(30, 30, 30);
 	color:  whitesmoke;
 	font-family: 'Lora',serif; /*Helvetica;*/
 	font-size: 18px;

@@ -11,7 +11,6 @@
     <li>
         <a href="ValidAdmin.php">Validation membres</a>
         <a href="GestionnaireMembres.php">Gestionnaire des membres</a>
-
     </li>
 
 </body>

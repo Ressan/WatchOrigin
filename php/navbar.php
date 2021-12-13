@@ -1,7 +1,7 @@
 
-      <div class="containerperso">
-          <a href=".." class="btn">
-          <img class="img-fluid" src="../images/logo-wo.png" alt="Logo-Wo" style=" max-width: 10%;">
+      <div class="containerperso justify-center">
+          <a href=".." style="text-decoration: none; ">
+          <img src="../images/logo-wo.png" alt="Logo-Wo" style=" max-width: 10%; ">
           WO</a> 
       </div>
     <nav class="navbar navbar-expand-sm bg-light navbar-dark justify-content-center">

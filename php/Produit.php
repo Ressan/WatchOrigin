@@ -8,6 +8,5 @@
 </head>
 <body>
     <h1>Nos produits</h1>
-    
 </body>
 </html>
