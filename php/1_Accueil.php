@@ -12,7 +12,7 @@
     ?>
     <div class="containerperso">
 
-        <div class="card-black">
+        <div class="card-linen">
             <h2>ACCUEIL</h2>
             <p> Ajouter le contenu d'accueil les valeurs etc</p>
             <div>

@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap|Lora|Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url("components/avatar.css");
 @import url("components/banner.css");
 @import url("components/button.css");
 @import url("components/container.css");
 @import url("components/card.css");
 @import url("components/footer.css");
+@font-face {
+    font-family: 'Helvetica Now';
+    src: local('Helvetica Now Text  Extra Light'), local('Helvetica-Now-Text--Extra-Light'),
+        url('fonts/HelveticaNowText-ExtraLight.woff2') format('woff2'),
+        url('fonts/HelveticaNowText-ExtraLight.woff') format('woff'),
+        url('fonts/HelveticaNowText-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
 /*Colors and fonts*/
 
 element.style {
@@ -12,9 +23,8 @@ element.style {
 
 
 body{
-	background: rgb(30, 30, 30);
-	color:  whitesmoke;
-	font-family: 'Lora',serif; /*Helvetica;*/
+	background-color: whitesmoke;
+	font-family: 'Helvetica Now',sans-serif; /*'Lora',serif; Helvetica;*/
 	font-size: 18px;
 	margin: 0px;
 }

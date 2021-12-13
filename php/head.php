@@ -13,8 +13,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
-    <!--Own style-->
-    <link rel="stylesheet" href="../css/style.css">
 
     <!-- jQuery library -->
     <!-- Popper JS -->
@@ -26,6 +24,8 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
+    <!--Own style-->
+    <link rel="stylesheet" href="../css/style.css">
     <?php 
     session_start();
     ?>
