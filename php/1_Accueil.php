@@ -9,6 +9,7 @@
 <body>
     <?php 
     include("navbar.php")
+    
     ?>
                 <video class="banner"src="../images/The_new_Rolex_Explorer_II.mp4" playsinline autoplay muted loop></video>
 

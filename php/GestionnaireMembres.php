@@ -5,8 +5,12 @@
     <title>Gestionnaire Membres</title>
 </head>
 <body>
+<?php include 'navbar.php'; ?>
+<center>
+    <br>
     <h1>Gestionnaire des membre</h1>
-
+    <br><br>
+</center>
     <?php
     $idf = mysqli_connect("127.0.0.1","root","","wo");
     $req = "select * from utilisateur ";
@@ -17,7 +21,7 @@
         $id = $ligne["id"];
         $nom="bouton".$id;
         
-        echo "<tr>
+        echo "<center><tr>
             <td>".$ligne["id"]."</td>
             <td>".$ligne["prenomUser"]."</td>
             <td>".$ligne["NomUser"]."</td>
@@ -33,7 +37,7 @@
         <form action="" method ="post">
         <input type="submit" value="Supprimer" name=',$nom,'>
         
-        </form>';
+        </form></center>';
         if(isset($_POST[$nom])){
 
 
@@ -43,7 +47,7 @@
             header("Refresh:0");
                 
         }
-        echo'<br>';
+        echo'<br><center>';
         
             
 }
