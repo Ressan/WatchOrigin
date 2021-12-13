@@ -34,7 +34,7 @@
                      </a>
                  </li>
                  <li class="sp-List_Item">
-                    <a href="lien">
+                    <a href="cg.php">
                         <div class="sp-List_ThumbLinkBox">
                             <span>
                                 <img role="img" src="../images/instruction_icon.png" alt="FAQ">
