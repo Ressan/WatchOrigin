@@ -95,6 +95,7 @@ session_start();
 
     <?php endforeach ;?>
 
+<<<<<<< HEAD
     </div>
         
        
@@ -104,5 +105,7 @@ session_start();
         include("footbar.php"); 
         ?>
 
+=======
+>>>>>>> parent of ac46797 (Update)
 </body>
 </html>

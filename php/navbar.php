@@ -38,6 +38,7 @@
 
         ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Produit.php">Produit</a>
@@ -54,6 +55,8 @@
                                 <li></li>
                             </ul>
 =======
+=======
+>>>>>>> parent of ac46797 (Update)
         <li>  
             <div class="col-sm-6 col-md-3 nav-item dropdown">
 
@@ -65,6 +68,9 @@
                                 </div>
             </div>
         </li>
+<<<<<<< HEAD
+>>>>>>> parent of ac46797 (Update)
+=======
 >>>>>>> parent of ac46797 (Update)
 
         </li>
