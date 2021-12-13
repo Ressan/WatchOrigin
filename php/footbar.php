@@ -1,29 +1,34 @@
   <div class="footer-dark">
     <footer>
-        <div class="container">
-            <div class="d-flex row">
-                <div class="col-sm-6 col-md-3 item">
-                    <h3>About Us</h3>
-                    <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
+        <div class="container" style="text-align: center;">
+                <div class="item">
+                    <h3>ABOUT US</h3>
+                    <ul class="d-flex row  justify-content-center" style="list-style: none;">
+                        <li class="col-md-1 item "><a href="#">Company</a></li>
+                        <li class="col-md-1 item"><a href="#">Team</a></li>
+                        <li class="col-md-1 item"><a href="#">Careers</a></li>
                     </ul>
                     
                 </div>
-                <div class=" col-sm-6 col-md-3 item">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li >Nasser : <a href="mailto:nassertaleb@hotmail.fr">nassertaleb@hotmail.fr</a></li>
-                        <li>Rayan : <a href="mailto:ta.yayaoye@gmail.com">ta.yayaoye@gmail.com</a></li>
-                        <li>Tade : <a href="mailto:rayan.kaci936@gmail.com">rayan.kaci936@gmail.com</a></li>
+            <div class="pt-3 d-flex row justify-content-center">
+                <div class="col-md-4 item ">
+                    <h3 id="test">CONTACT US</h3>
+                    <ul style="list-style: none;">
+                        <li class=" item ">Nasser : <a href="mailto:nassertaleb@hotmail.fr">nassertaleb@hotmail.fr</a></li>
+                        <li class=" item ">Rayan : <a href="mailto:ta.yayaoye@gmail.com">ta.yayaoye@gmail.com</a></li>
+                        <li class=" item ">Tade : <a href="mailto:rayan.kaci936@gmail.com">rayan.kaci936@gmail.com</a></li>
                     </ul>
                 </div>
-                <div class="col-md-6 item text">
-                    <h3>Watchs Originals</h3>
-                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class=" 1_Accueil.php"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                <div class="col-md-3 item text">
+                    <h3>SOCIAL</h3>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class=" 1_Accueil.php"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-            <p class="">Copyright Watchs Originals  . Tous droits réservés. 2021</p>
+            <div>
+                <p class="">Copyright Watch Origin. Tous droits réservés. 2021</p>
+                    
+            </div>
         </div>
     </footer>
 </div>
