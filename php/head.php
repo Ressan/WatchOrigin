@@ -23,9 +23,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
+    
+    <!-- Font Awesome - icon-->
+    <script src="https://kit.fontawesome.com/227c05693d.js" crossorigin="anonymous"></script>
     <!--Own style-->
     <link rel="stylesheet" href="../css/style.css">
+    
     <?php 
     session_start();
     ?>
