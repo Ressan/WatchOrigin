@@ -18,13 +18,14 @@ while($ligne = mysqli_fetch_assoc($res)){
 
     $id = $ligne["id"];
     $nom="bouton".$id;
-    $nom2="bouton".$id;
+    $nom2="bouton2".$id;
+    
         echo '
             <form action="" method ="post">';
 
                 echo''.$ligne["prenomUser"].'&nbsp&nbsp&nbsp'.$ligne["NomUser"].'&nbsp&nbsp&nbsp'.$ligne["Mail"].'
                 <input type="submit" value="Valider" name =',$nom,'>
-                <input type="submit" value="Radier" name =',$nom,'><br>';
+                <input type="submit" value="Radier" name =',$nom2,'><br>';
                 
                 echo'<br>';
                 if(isset($_POST[ $nom])){
