@@ -12,7 +12,7 @@
      <h2>Connexion</h2>
     <?php 
     if(isset($_POST["ok"])){
-        $id = mysqli_connect("'localhost':3306","root","root");
+        $id = mysqli_connect("127.0.0.1","root","","wo");
         $Mail = $_POST["mail"];
         $Mdp = $_POST["mdp"];
         $req = "select * from utilisateur where mail='$Mail' and Mdp='$Mdp'";

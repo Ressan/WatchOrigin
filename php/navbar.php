@@ -1,29 +1,61 @@
-    <h1>
-    <a href="..">WO</a>
-    </h1>
-    <li>
-    <a href="2_Apropos.php"> A propos</a>
-    <a href="3_ServiceClient.php">Service client</a>
-    <?php
-    if(isset($_SESSION['Mail'])){
-          
-          ?>
-          <a href="4_profil.php" name="Compte">Mon compte</a>
-    <?php
-        }else{
-    ?>
-          <a href="5_connexion.php" name="Connexion">Connexion</a>
-    <?php
-        }
 
-    ?>
-    </li>
+      <div class="containerperso justify-center">
+          <a href=".." id="bouton-logo">
+          <img src="../images/logo-wo.png" alt="Logo-Wo" style=" max-width: 10%; ">
+          WO</a>
+      </div>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center navstyle" >
+      <ul class="nav nav-justified">
+        <li class="nav-item">
+          <a class="nav-link" href="2_Apropos.php"> A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="3_ServiceClient.php">Service client</a>
+        </li>
+        <?php
+        if(isset($_SESSION['Mail'])){      
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="4_profil.php" name="Compte">Mon compte</a>
+        </li>
+        <?php
 
-        <div class="col-sm-6 col-md-3 item">
-                    <h3>Produit</h3>
-                    <ul>
-                        <li><a href="#">WO for men</a></li>
-                        <li><a href="#">WO for women</a></li>
-                        <li><a href="#">WO customs</a></li>
-                    </ul>
-        </div>
+                if($_SESSION['Mail']  == 'Admin@wo.com'){
+
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="pageAdmin.php">interface Admin</a>
+        </li>
+        <?php
+                }
+            }else{
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="5_connexion.php" name="Connexion">Connexion</a>
+        </li>
+        <?php
+            }
+
+        ?>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Produit.php">Produit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Panier.php">Panier</a>
+        </li>
+        
+                            <!-- 
+                            <h3>Produit</h3>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+
+                            -->
+
+      </ul>
+    </nav>
+
+        
