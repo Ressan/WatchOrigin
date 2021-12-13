@@ -32,7 +32,7 @@
 
     if(isset($_POST['ok'])){
         $id = mysqli_connect("127.0.0.1","root","","wo");
-        $Mail = $_POST["mail"];
+        $Mail = $_POST["Mail"];
         $req = "select Mail from utilisateur where Mail='".$Mail."'";
         $res = mysqli_query($id,$req);
 
@@ -46,17 +46,14 @@
             
             $Nom = $_POST["Nom"];
             $Prenom = $_POST["Prenom"];
-            $Mail = $_POST["mail"];
+            $Mail = $_POST["Mail"];
             $Mdp = $_POST["mdp"];
             $ville = $_POST["ville"];
             $Cp = $_POST["Cp"];
             $rue = $_POST["rue"];
-            $typeUser = 0;
-            $valider = 0;
-            echo $typeUser, $valider;
     
        
-            $req = "insert into utilisateur values (null,'$typeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue',$valider)";
+            $req = "insert into utilisateur values ('$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue')";
             $res = mysqli_query($id,$req);
 
 

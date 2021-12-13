@@ -11,7 +11,7 @@
     <?php
 
         $Mail = $_SESSION['Mail'];
-        $_SESSION['Mail'] = $Mail;
+    
         $idf = mysqli_connect("127.0.0.1","root","","wo");
         $req = "select prenomUser, NomUser, Mail, rue, adresseUser, CpVille, TypeUser from utilisateur where Mail='".$Mail."'";
         $res = mysqli_query($idf,$req);

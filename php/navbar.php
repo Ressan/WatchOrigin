@@ -39,6 +39,7 @@
         ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Produit.php">Produit</a>
@@ -81,6 +82,9 @@
                                 <li></li>
                                 <li></li>
                             </ul>
+=======
+       
+>>>>>>> parent of 5e5195a (Merge branch 'Rayan' into Ressan-Branch)
 
                             -->
 

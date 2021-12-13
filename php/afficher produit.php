@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <?php
-    function Btn{
+    function{
     $idf = mysqli_connect("127.0.0.1","root","","wo");
     $req = "select idProduit from produit ";
     $res = mysqli_query($idf,$req); 
@@ -24,8 +24,7 @@ session_start();
         $_SESSION['id'] = $id;
 
     }
-}
     ?>
-    
+    }
 </body>
 </html>

@@ -1,20 +1,23 @@
 
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
-    include("head.php")
-    ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <h1>Mon panier</h1>
+    <li>
+        <a href="1_Accueil">Accueil</a>
+    </li>
 
-<?php 
-    include("navbar.php");
-    
-    echo'<center><h1>Mon panier</h1></center>';
+    <?php
 
     $dsn = 'mysql:dbname=wo;host=127.0.0.1';
     $user = 'root';
@@ -35,96 +38,84 @@
 ?>
 
 
-    <div class="row no-gutte" style="margin: 20px">
-        <?php 
-        foreach($produit as $c) : ?>
-        <div class="col-3">
-            <div class="card" style="width: 15rem; height: 30rem;margin-top: 30px; ">
-            <img src=" ../images/<?= $c['image'] ?>" class="card-img-top" >
-            <div class="card-body">
-            <?php    
-            $idProd = $c['idProduit'] ;
-            $nom = "bouton".$c['idProduit'] ;
-            $nom2 = "bouton2".$c['idProduit'] ;
-            $nom3 = "bouton3".$c['idProduit'] ;
+
+    <?php 
+    foreach($produit as $c) : ?>
+    <div class="card" style="width: 18rem;">
+    <img src=" <?= $c['image'] ?>" class="card-img-top">
+        <div class="card-body">
+        <?php    
+        $idProd = $c['idProduit'] ;
+        $nom = "bouton".$c['idProduit'] ;
+        $nom2 = "bouton2".$c['idProduit'] ;
+        $nom3 = "bouton3".$c['idProduit'] ;
+        
+        
+            ?>
+            <h5 class="card-title"><?= $c['libelle'] ?></h5>
             
-            
-                ?>
-                <h5 class="card-title"><?= $c['libelle'] ?></h5>
-                
-                <h3 class="card-title"><?= $c['Prix'] ?>€</h3>
-            
-                <?php
-                echo'
-                <form action="" method="post">
-                    <input type="submit" value="Ajouter" name=',$nom,'>
-                    <input type="submit" value="Supprimer" name=',$nom2,'><br><br><br>
-                ';
-                
-                ?>
-                </form>
-                
-                <?php 
-                
-                if(isset($_POST[$nom])){
-                
-                    $total2 = 1;
-
-                    $req3 = "UPDATE produit  set Total = Total + '1' where idProduit = '$idProd'";
-                    $stmt3 = $pdo->prepare($req3);
-                    $stmt3 -> execute();
-                   
-                    
-                    
-                
-                    
-
-                }else if(isset($_POST[$nom2])){
-                
-                    
-                    $total3 = -1; 
-
-                    $req3 = "UPDATE produit  set Total = '0' , Etat = '0' where idProduit = '$idProd'";
-                    $stmt3 = $pdo->prepare($req3);
-                    $stmt3 -> execute();
-                    $c['Total'];
-                    
-                    
-
-
-                }
-                
-                $ouiii = $c['Total'];
-                echo $ouiii;
-                echo '<br>';
-                $totalp = $c['Total'] * $c['Prix'] ;
-                echo $totalp, '€';
-                
-                $MaxiTot = $MaxiTot + $totalp;
-                ?>
-                </div>
-            </div>   
-        </div>
+            <h3 class="card-title"><?= $c['Prix'] ?>€</h3>
+        
             <?php
-        endforeach ;
+            echo'
+            <form action="" method="post">
+                <input type="submit" value="Ajouter" name=',$nom,'>
+                <input type="submit" value="Supprimer" name=',$nom2,'><br><br><br>
+            ';
+            
+            ?>
+            </form>
+            
+            <?php 
+            
+            if(isset($_POST[$nom])){
+            
+                $total2 = 1;
+
+                $req3 = "UPDATE produit  set Total = Total + '1' where idProduit = '$idProd'";
+                $stmt3 = $pdo->prepare($req3);
+                $stmt3 -> execute();
+                
+                
+                
+               
+                
+
+            }else if(isset($_POST[$nom2])){
+            
+                
+                $total3 = -1; 
+
+                $req3 = "UPDATE produit  set Total = '0' , Etat = '0' where idProduit = '$idProd'";
+                $stmt3 = $pdo->prepare($req3);
+                $stmt3 -> execute();
+                $c['Total'];
+                
+                
+
+
+            }
+            
+            $ouiii = $c['Total'];
+            echo $ouiii;
+            echo '<br>';
+            $totalp = $c['Total'] * $c['Prix'] ;
+            echo $totalp, '€';
+            
+            $MaxiTot = $MaxiTot + $totalp;
+    
+    endforeach ;
 ?>
 
             
-        
+        </div>
     </div>
-    <br><br>
+    <br><br><br><br><br>
     <form action="" method="post">
-        
-    <center> <h2><?php echo $MaxiTot;  ?> €</h2> </center>
-    
-    
-    <center>
-    <input type="submit" value="Commander" name="Valider"><br><br>
-    </center>
+    <input type="submit" value="Commander" name="Valider">
     </form>
     <?php
-    
-    /*
+    echo $MaxiTot, '€';
     if(isset($_POST['valider'])){#button de validation de la commande dans le panier
         $id = mysqli_connect("127.0.0.1","root","","wo");
         $_POST["mail"] = $_SESSION['Mail'];
@@ -159,9 +150,9 @@
         ?>
         <form method="POST" action="">
             <input type="submit" value="Valider ma commande" name="valider"/>
-        </form>*/
+        </form>
             
-?>
+
     
 </body>
 </html>
