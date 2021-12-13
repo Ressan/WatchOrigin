@@ -74,14 +74,7 @@
         }
         header('Location: 4_profil.php');
     }
-<<<<<<< Updated upstream
             include "footbar.php";
          ?>
-=======
-    ?>
-    <?php 
-      include("navbar.php")
-    ?>
->>>>>>> Stashed changes
 </body>
 </html>

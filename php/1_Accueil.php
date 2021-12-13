@@ -10,14 +10,10 @@
     <?php 
     include("navbar.php")
     ?>
-<<<<<<< Updated upstream
-    <div class="containerperso">
-=======
     <div class="img-poster">
         <video  src="../images/videoaccueile.mp4 "playsinline autoplay muted loop><h2>ACCUEIL</h2></video>
     </div>
     <p> Ajouter le contenu d'accueil les valeurs etc</p>
->>>>>>> Stashed changes
 
         <div class="card-linen">
             <h2>ACCUEIL</h2>
