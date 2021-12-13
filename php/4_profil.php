@@ -1,38 +1,17 @@
-
-<?php
-session_start();
-
-    
-
-$Mail = $_SESSION['Mail'];
-
-
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php include("head.php") ?>
+    <title>Profil | WO - Watch Origin</title>
 </head>
 <body>
-    <a href="1_Accueil.php">Accueil</a> <br><br>
+    <?php include("navbar.php") ?>
 
     <h1>Votre profil</h1>
     <?php
 
-
-        
-
-       
+        $Mail = $_SESSION['Mail'];
     
-
         $idf = mysqli_connect("127.0.0.1","root","","wo");
         $req = "select prenomUser, NomUser, Mail, rue, adresseUser, CpVille, TypeUser from utilisateur where Mail='".$Mail."'";
         $res = mysqli_query($idf,$req);
@@ -62,9 +41,6 @@ $Mail = $_SESSION['Mail'];
        
     ?>
 
-
-       
-
     <form action="" method='post'>
         
     <input type="submit" value="Deconnexion" name="Deconnexion"style="width:150px; height: 50px; font-size: 23px">    
@@ -74,10 +50,8 @@ $Mail = $_SESSION['Mail'];
     <?php 
 
     if(isset($_POST['Deconnexion'])){
-
         session_destroy();
-        header('Location: 1_accueil.php');
-            
+        header('Location: 1_accueil.php');       
     }
 
     if(isset($_POST['Modifier'])){
@@ -169,5 +143,6 @@ $Mail = $_SESSION['Mail'];
     ?>
     
 
+    <?php include("footbar.php") ?>
 </body>
 </html>

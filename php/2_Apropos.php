@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A propos</title>
+       <?php 
+    include("head.php")
+    ?>
+    <title>A Propos | WO - Watch Origin</title>
 </head>
 <body>
-    
+    <?php 
+    include("navbar.php")
+    ?>
+    <h2>A propos</h2>
+    <p> Ajouter le contenu d'accueil les valeurs etc</p>
+
+    <?php 
+    include("footbar.php"); 
+    ?>
 </body>
 </html>

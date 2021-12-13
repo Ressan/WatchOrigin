@@ -1,18 +1,18 @@
-<?php 
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <?php 
+      include("head.php")
+    ?>
+    <title>Inscription | WO - Watch Origin</title>
 </head>
 <body>
 
-    <a href="1_Accueil.php">Accueil</a> <br><br>
+    <?php 
+      include("navbar.php")
+    ?>
 
     <h1>Inscription</h1>
     <form action="" method='post'>
@@ -32,8 +32,8 @@ session_start();
 
     if(isset($_POST['ok'])){
         $id = mysqli_connect("127.0.0.1","root","","wo");
-        $Mail = $_POST["mail"];
-        $req = "select Mail from utilisateur where Mail='.$Mail.'";
+        $Mail = $_POST["Mail"];
+        $req = "select Mail from utilisateur where Mail='".$Mail."'";
         $res = mysqli_query($id,$req);
 
         if ( mysqli_num_rows($res) > 0 ){
@@ -42,20 +42,18 @@ session_start();
     
             
         
-            
+            $id = mysqli_connect("127.0.0.1","root","","wo");
             
             $Nom = $_POST["Nom"];
             $Prenom = $_POST["Prenom"];
-            $Mail = $_POST["mail"];
+            $Mail = $_POST["Mail"];
             $Mdp = $_POST["mdp"];
             $ville = $_POST["ville"];
             $Cp = $_POST["Cp"];
             $rue = $_POST["rue"];
-            $TypeUser = 0;
-            $Valider = 0;
     
        
-            $req = "insert into utilisateur values (null,'$TypeUser','$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue','$Valider')";
+            $req = "insert into utilisateur values ('$Mail','$Mdp','$Prenom','$Nom','$ville','$Cp','$rue')";
             $res = mysqli_query($id,$req);
 
 
@@ -63,16 +61,17 @@ session_start();
             $_SESSION['mdp'] = $Mdp;
             $_SESSION['Prenom'] = $Prenom;
             $_SESSION['Nom'] = $Nom ;
-            $_SESSION['TypeUser'] = $TypeUser ;
+            
             $_SESSION['ville'] = $ville;
             $_SESSION['Cp'] = $Cp;
             $_SESSION['rue'] = $rue;
             
-            header('Location: 4_profil.php');
+            
             
         }
-       
+        header('Location: 4_profil.php');
     }
-        ?>
+            include "footbar.php";
+         ?>
 </body>
 </html>
