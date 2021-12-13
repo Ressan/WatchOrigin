@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="serviceclient.css">   
     <?php include("head.php") ?>
     <title>Service Client | WO - Watch Origin</title>
 </head>
@@ -10,12 +11,23 @@
         <div class="sp-List_Inner">
             <h2 class="sp-List_Heading">Nous Contacter / FAQ / Conditions Générales</h2>
             <ul class="sp-List_Items-quarter is-center">
+                
                    
                  <li class="sp-List_Item">
-                     <a href="lien">
+                     <a href="7_Nous_Contacter.php">
                          <div class="sp-List_ThumbLinkBox">
                              <span>
-                                 <img role="img" src="../images/faq_Icon.png" alt="FAQ">
+                                 <img role="img" src="../images/Nouscontacter_Icon.png" alt="Nous Contacter">
+                             </span>
+                         </div>
+                         <p class="sp-List_ThumbLinkTitle">Nous Contacter</p>
+                     </a>
+                 </li>
+                 <li class="sp-List_Item">
+                     <a href="faq.php">
+                         <div class="sp-List_ThumbLinkBox">
+                             <span>
+                                 <img role="img" src="../images/faq_icon.png" alt="FAQ">
                              </span>
                          </div>
                          <p class="sp-List_ThumbLinkTitle">FAQ</p>
