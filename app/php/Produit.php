@@ -13,7 +13,7 @@
     include("navbar.php");
     
 
-    $dsn = 'mysql:dbname=wo;host=127.0.0.1';
+    $dsn = 'mysql:dbname=wo;host=mysql'; ##127.0.0.1';
     $user = 'root';
     $password = '';
 

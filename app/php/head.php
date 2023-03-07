@@ -29,6 +29,4 @@
     <!--Own style-->
     <link rel="stylesheet" href="../css/style.css">
     
-    <?php 
-    session_start();
-    ?>
+    <?php ##session_start();?> 

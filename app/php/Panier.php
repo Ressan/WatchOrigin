@@ -16,7 +16,7 @@
     
     echo'<center><h1>Mon panier</h1></center>';
 
-    $dsn = 'mysql:dbname=wo;host=127.0.0.1';
+    $dsn = 'mysql:dbname=wo;host=mysql'; ##127.0.0.1';
     $user = 'root';
     $password = '';
 
